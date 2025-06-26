@@ -1,0 +1,555 @@
+/* Mobile Responsiveness */
+        @media (max-width: 992px) {
+            .hero h2 {
+                font-size: 2.5rem;
+            }
+            
+            .hero-btns {
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+            }
+            
+            .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .mobile-toggle {
+                display: block;
+            }
+            
+            nav ul {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                flex-direction: column;
+                background-color: white;
+                width: 100%;
+                text-align: center;
+                box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+                transition: all 0.3s;
+                padding: 20px 0;
+            }
+            
+            nav ul.active {
+                left: 0;
+            }
+            
+            nav li {
+                margin: 15px 0;
+            }
+            
+            .hero h2 {
+                font-size: 2.2rem;
+            }
+            
+            .section {
+                padding: 60px 0;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .location-content {
+                flex-direction: column;
+            }
+            
+            .form-row {
+                flex-direction: column;
+                gap: 0;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero {
+                padding: 80px 0;
+            }
+            
+            .hero h2 {
+                font-size: 2rem;
+            }
+            
+            .logo h1 {
+                font-size: 1.5rem;
+            }
+            
+            .booking-container, .guide-container {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <h1>Zelda's <span>Pet Grooming</span></h1>
+            </div>
+            <div class="mobile-toggle" id="mobileToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <nav>
+                <ul id="navMenu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#reviews">Reviews</a></li>
+                    <li><a href="#location">Location</a></li>
+                    <li><a href="#booking" class="btn btn-primary">Book Now</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container hero-content">
+            <h2>Pamper Your Pets With Premium Grooming</h2>
+            <p>Professional grooming services for dogs and cats in Rolling Hills Estates. We treat your pets like family with gentle care and attention to detail.</p>
+            <div class="hero-btns">
+                <a href="#services" class="btn">Our Services</a>
+                <a href="#booking" class="btn btn-primary">Book Appointment</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section" id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Grooming Services</h2>
+                <p>We offer a range of services to keep your pets looking and feeling their best</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1596492784531-6e6eb5ea9993?q=80" alt="Dog bathing service">
+                    </div>
+                    <div class="service-content">
+                        <h3>Full-Service Bath</h3>
+                        <p>Complete bath with hypoallergenic shampoo, conditioning, blow dry, and brush out.</p>
+                        <div class="price">$40 - $70</div>
+                        <a href="#booking" class="btn">Book Now</a>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?q=80" alt="Dog haircut">
+                    </div>
+                    <div class="service-content">
+                        <h3>Haircut & Styling</h3>
+                        <p>Breed-specific cuts or custom styling to keep your pet looking fabulous.</p>
+                        <div class="price">$50 - $90</div>
+                        <a href="#booking" class="btn">Book Now</a>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?q=80" alt="Cat grooming">
+                    </div>
+                    <div class="service-content">
+                        <h3>Feline Grooming</h3>
+                        <p>Specialized grooming for cats including bath, brushing, and nail trim.</p>
+                        <div class="price">$60 - $85</div>
+                        <a href="#booking" class="btn">Book Now</a>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1581888227599-779811939961?q=80" alt="Pet spa treatment">
+                    </div>
+                    <div class="service-content">
+                        <h3>Deluxe Spa Package</h3>
+                        <p>Premium package includes blueberry facial, paw treatment, and aromatherapy.</p>
+                        <div class="price">$85 - $130</div>
+                        <a href="#booking" class="btn">Book Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="section gallery" id="gallery">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Happy Clients</h2>
+                <p>See the transformation of our furry friends after their grooming sessions</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?q=80" alt="Groomed golden retriever">
+                    <div class="gallery-overlay">
+                        <h4>Golden Retriever Makeover</h4>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?q=80" alt="Poodle haircut">
+                    <div class="gallery-overlay">
+                        <h4>Poodle Styling</h4>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1517423568366-8b83523034fd?q=80" alt="Cat grooming">
+                    <div class="gallery-overlay">
+                        <h4>Feline Grooming</h4>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?q=80" alt="Small dog grooming">
+                    <div class="gallery-overlay">
+                        <h4>Shih Tzu Transformation</h4>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1583337427004-8987b6eb29d5?q=80" alt="Dog after bath">
+                    <div class="gallery-overlay">
+                        <h4>Post-Bath Freshness</h4>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1537151608828-ea2b11777ee8?q=80" alt="Happy dog with bow">
+                    <div class="gallery-overlay">
+                        <h4>Special Occasion Styling</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="section reviews" id="reviews">
+        <div class="container">
+            <div class="section-title">
+                <h2>Happy Pet Parents</h2>
+                <p>See what our clients are saying about their experience</p>
+            </div>
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="review-info">
+                            <h3>Sarah Johnson</h3>
+                            <div class="review-stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-content">
+                        <p>"Zelda's transformed my anxious golden retriever into a calm, happy pup! The staff is incredibly patient and skilled. My dog actually gets excited to go to the groomer now!"</p>
+                    </div>
+                    <div class="review-date">June 15, 2023</div>
+                </div>
+                
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="review-info">
+                            <h3>Michael Chen</h3>
+                            <div class="review-stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-content">
+                        <p>"Our Persian cat has never looked better! The feline specialists at Zelda's handled her with such care. The spa package was worth every penny - she came home smelling amazing and looking gorgeous."</p>
+                    </div>
+                    <div class="review-date">May 28, 2023</div>
+                </div>
+                
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="review-info">
+                            <h3>Jennifer Lopez</h3>
+                            <div class="review-stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-content">
+                        <p>"I've tried several groomers in the area, and Zelda's is by far the best. They took the time to understand my poodle's specific needs and gave him the perfect cut. Booking through Calendly was super convenient too!"</p>
+                    </div>
+                    <div class="review-date">June 5, 2023</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section class="section location" id="location">
+        <div class="container">
+            <div class="section-title">
+                <h2>Visit Our Location</h2>
+                <p>We're conveniently located in Rolling Hills Estates</p>
+            </div>
+            <div class="location-content">
+                <div class="location-info">
+                    <h3>Contact Information</h3>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Address</h4>
+                            <p>550 Deep Valley Dr, Rolling Hills Estates, CA 90274</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Phone</h4>
+                            <p>(310) 541-1000</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <p>info@zeldaspetgrooming.com</p>
+                        </div>
+                    </div>
+                    
+                    <h3 style="margin-top: 40px;">Business Hours</h3>
+                    <ul class="hours-list">
+                        <li><span>Monday - Friday</span> <span>8:00 AM - 6:00 PM</span></li>
+                        <li><span>Saturday</span> <span>9:00 AM - 4:00 PM</span></li>
+                        <li><span>Sunday</span> <span>Closed</span></li>
+                    </ul>
+                </div>
+                
+                <div class="location-map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3310.231976932072!2d-118.28982572426867!3d34.03977327322972!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzTCsDAyJzIzLjIiTiAxMTjCsDE3JzE0LjIiVw!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section class="section booking" id="booking">
+        <div class="container">
+            <div class="section-title">
+                <h2>Book an Appointment</h2>
+                <p>Schedule your pet's grooming session with our easy online booking</p>
+            </div>
+            
+            <div class="booking-container">
+                <div class="booking-steps">
+                    <div class="step active">
+                        <div class="step-number">1</div>
+                        <div>Service</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div>Details</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div>Confirm</div>
+                    </div>
+                </div>
+                
+                <div class="booking-form">
+                    <div class="form-group">
+                        <label for="service">Select Service</label>
+                        <select id="service">
+                            <option value="">Choose a grooming service</option>
+                            <option value="bath">Full-Service Bath ($40-$70)</option>
+                            <option value="haircut">Haircut & Styling ($50-$90)</option>
+                            <option value="feline">Feline Grooming ($60-$85)</option>
+                            <option value="spa">Deluxe Spa Package ($85-$130)</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="pet-name">Pet's Name</label>
+                            <input type="text" id="pet-name" placeholder="Enter your pet's name">
+                        </div>
+                        <div class="form-group">
+                            <label for="pet-type">Pet Type</label>
+                            <select id="pet-type">
+                                <option value="">Select pet type</option>
+                                <option value="dog">Dog</option>
+                                <option value="cat">Cat</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="date">Preferred Date</label>
+                            <input type="date" id="date">
+                        </div>
+                        <div class="form-group">
+                            <label for="time">Preferred Time</label>
+                            <select id="time">
+                                <option value="">Select time</option>
+                                <option value="morning">Morning (8 AM - 11 AM)</option>
+                                <option value="afternoon">Afternoon (12 PM - 3 PM)</option>
+                                <option value="late">Late Afternoon (3 PM - 6 PM)</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="notes">Special Requests or Notes</label>
+                        <textarea id="notes" rows="4" placeholder="Any special instructions for our groomers?"></textarea>
+                    </div>
+                    
+                    <a href="https://calendly.com/petpovbusiness" class="btn btn-primary" target="_blank">Continue to Booking</a>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3>Zelda's Pet Grooming</h3>
+                    <p>Providing premium grooming services with love and care since 2010. We treat your pets like family.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#reviews">Reviews</a></li>
+                        <li><a href="#location">Location</a></li>
+                        <li><a href="#booking">Book Appointment</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="#services">Dog Grooming</a></li>
+                        <li><a href="#services">Cat Grooming</a></li>
+                        <li><a href="#services">Bathing</a></li>
+                        <li><a href="#services">Haircuts</a></li>
+                        <li><a href="#services">Nail Trimming</a></li>
+                        <li><a href="#services">Spa Packages</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe for grooming tips and exclusive offers</p>
+                    <form>
+                        <input type="email" placeholder="Your Email" style="width:100%;padding:12px;margin-bottom:15px;border-radius:5px;border:none;">
+                        <button type="submit" class="btn">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 Zelda's Pet Grooming. All Rights Reserved. | Designed with ❤ for Pets</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Navigation Toggle
+        const mobileToggle = document.getElementById('mobileToggle');
+        const navMenu = document.getElementById('navMenu');
+        
+        mobileToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            const icon = mobileToggle.querySelector('i');
+            if (icon.classList.contains('fa-bars')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (navMenu.classList.contains('active')) {
+                        navMenu.classList.remove('active');
+                        const icon = mobileToggle.querySelector('i');
+                        icon.classList.remove('fa-times');
+                        icon.classList.add('fa-bars');
+                    }
+                }
+            });
+        });
+        
+        // Simple animation on scroll
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+        
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+        
+        document.querySelectorAll('.service-card, .gallery-item, .review-card').forEach(item => {
+            observer.observe(item);
+        });
+    </script>
+</body>
+</html>
